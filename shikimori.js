@@ -1,6 +1,6 @@
 /* Shikimori for Lampa — compatibility loader
  * Upstream module: https://github.com/lampame/main/tree/main/Shikimori
- * This shim replaces the missing /main/shikimori.js loader.
+ * Loads a locally patched LME Shikimori module.
  * The original Shikimori implementation remains maintained by its author.
  */
 (function () {
@@ -8,7 +8,7 @@
   if (window.__anicim_shikimori_loader) return;
   window.__anicim_shikimori_loader = true;
 
-  var url = 'https://lampame.github.io/main/Shikimori/Shikimori.js';
+  var url = 'https://anicim.github.io/lampa-plugins/shikimori-lme-fixed.js';
   var script = document.createElement('script');
   script.src = url;
   script.async = true;
